@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="product_box"></div>
+    <br>
+    <h1 class="yourJSON">a</h1>
+
+    <style>
+        .product {
+            width: 200px;
+            border: 1px solid black;
+        }
+    </style>
+
+    <script src="json_data.js">
+    </script>
+
+    <script>
+        const usersData = JSON.parse(dataJson);
+        console.log(usersData);
+        const h1El = document.querySelector('.yourJSON');
+        h1El.textContent = `Is your data from JSON ${usersData.bob.username}`
+
+
+        const productsData = [
+            {
+                src: 'img1.png',
+                alt: 'img obj data 1',
+                name: 'name from object data1',
+                link: 'productData1.html',
+                description: '1.Product description from poduct data OBJECT',
+                price: 100
+            },
+            {
+                src: 'img2.png',
+                alt: 'img obj data 2',
+                name: 'name from object data2',
+                link: 'productData2.html',
+                description: '2.Product description from poduct data OBJECT',
+                price: 200
+            }
+        ]
+        productsData.forEach(productData => {
+            const productBoxEl = document.querySelector('.product_box');
+            const productEl = document.createElement('div');
+            productEl.classList.add('product');
+            productBoxEl.appendChild(productEl);
+
+            const productImageEl = document.createElement('img');
+            productEl.classList.add('product_image');
+            productImageEl.setAttribute('src', productData.src);
+            productImageEl.setAttribute('alt', productData.alt);
+            productEl.appendChild(productImageEl);
+
+            const productContentEl = document.createElement('div');
+            productContentEl.classList.add('product_content'); // need to add to product
+
+            const productNameLinkEl = document.createElement('a');
+            productNameLinkEl.classList.add('product_name_link');
+            productNameLinkEl.setAttribute('href', productData.link);
+            productNameLinkEl.textContent = productData.name;
+
+            const productTextEl = document.createElement('p');
+            productTextEl.classList.add('product_text');
+            productTextEl.textContent = productData.description;
+
+            const productPriceEl = document.createElement('p');
+            productPriceEl.classList.add('product_price');
+            productPriceEl.textContent = productData.price;
+            productContentEl.appendChild(productNameLinkEl);
+            productContentEl.appendChild(productTextEl);
+            productContentEl.appendChild(productPriceEl);
+            productEl.appendChild(productContentEl);
+
+        });
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
