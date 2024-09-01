@@ -1,0 +1,452 @@
+/**
+ * "ColorPalette"
+ * Primary colors
+ */
+/* Header-background colors */
+/* Phone number input colors */
+/* Avatar-background colors */
+/* Secondary colors */
+/* Semantic colors (Success) */
+/* Semantic colors (Error) */
+/* Semantic colors (Attention) */
+/* Neutral colors */
+/* black-opacity */
+/* white-opacity */
+/* Elevations */
+/* Grid breakpoints */
+/* Grid paddings */
+/* Fonts */
+/* Transition */
+/* Images */
+/* Transition */
+.scroller {
+  position: relative;
+  padding: 0;
+  margin-top: 24px;
+}
+.scroller * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.scroller__header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.scroller__header-title {
+  color: #3f5368;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 500;
+  padding-left: 24px;
+}
+.scroller__buttons {
+  display: flex;
+  margin-left: auto;
+  padding: 0 24px 0 16px;
+}
+
+/**
+ * "ColorPalette"
+ * Primary colors
+ */
+/* Header-background colors */
+/* Phone number input colors */
+/* Avatar-background colors */
+/* Secondary colors */
+/* Semantic colors (Success) */
+/* Semantic colors (Error) */
+/* Semantic colors (Attention) */
+/* Neutral colors */
+/* black-opacity */
+/* white-opacity */
+/* Elevations */
+/* Grid breakpoints */
+/* Grid paddings */
+/* Fonts */
+/* Transition */
+/* Images */
+/* Transition */
+.lesson-item {
+  position: relative;
+  display: inline-block;
+  min-width: 207px;
+  min-height: 226px !important;
+  max-width: 207px;
+  max-height: 226px;
+  border-radius: 16px;
+  margin: 20px 24px 30px 0;
+  background: #f4f5fa;
+  transition: background, box-shadow 0.3s ease;
+  cursor: pointer;
+  font-family: "GB Font", sans-serif;
+  transform: translateX(24px);
+}
+.lesson-item.lesson-item_active {
+  background: #e8e5f9;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.lesson-item.lesson-item_active .lesson-item__top {
+  transition: fill 0.15s ease;
+  color: #8d46f6;
+}
+.lesson-item:hover:not(.lesson-item_future) {
+  box-shadow: 0 4px 25px 0 rgba(33, 59, 134, 0.3);
+  transition: box-shadow 0.3s ease;
+  background: #ffffff;
+}
+.lesson-item:hover:not(.lesson-item_future) .lesson-item__top {
+  transition: color 0.3s ease;
+  color: #8d46f6;
+}
+.lesson-item:hover:not(.lesson-item_future) .lesson-item__title-text {
+  transition: color 0.3s ease;
+  color: #8d46f6;
+}
+.lesson-item_future {
+  cursor: default;
+}
+.lesson-item_future__top {
+  flex-direction: column;
+}
+.lesson-item_future__top p {
+  margin: 0;
+}
+.lesson-item_no-click {
+  cursor: default;
+}
+.lesson-item_no-click:hover:not(.lesson-item_future) {
+  box-shadow: none;
+  background: #f4f5fa;
+}
+.lesson-item_no-click:hover:not(.lesson-item_future) .lesson-item__top,
+.lesson-item_no-click:hover:not(.lesson-item_future) .lesson-item__title-text {
+  color: #191816;
+}
+.lesson-item_feedback {
+  background: #fcb8ff;
+}
+.lesson-item_feedback:hover:not(.lesson-item_future) {
+  background: #fcb8ff;
+}
+.lesson-item__status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  position: absolute;
+  font-family: "GB Font", sans-serif !important;
+  top: 8px;
+  left: 16px;
+  font-size: 10px;
+  font-weight: 400 !important;
+  min-height: 24px;
+}
+.lesson-item__status-icon.gb-icon {
+  margin-right: 6px;
+  width: 12px;
+  height: 12px;
+}
+.lesson-item__status-icon-seen.gb-icon {
+  margin-right: 6px;
+  width: 15px;
+  height: 10px;
+}
+.lesson-item__status-icon-closed.gb-icon {
+  margin-right: 6px;
+  width: 18px;
+  height: 27px;
+}
+.lesson-item__closed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  position: absolute;
+  top: 16px;
+  left: 17px;
+  font-size: 10px;
+}
+.lesson-item__closed .gb-icon {
+  width: 18px;
+  height: 27px;
+}
+.lesson-item__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://frontend-scripts.hb.bizmrg.com/assets/images/lesson-background.svg");
+  border-radius: 12px;
+  width: 191px;
+  height: 81px;
+  margin: 8px auto;
+  transition: color, background 0.3s ease;
+  color: #1f222e;
+  text-align: center;
+}
+.lesson-item__top.lesson-item_is-homework {
+  background: url("https://frontend-scripts.hb.bizmrg.com/assets/images/homework-background.svg");
+}
+.lesson-item__top.lesson-item_is-final-project {
+  background: url("https://frontend-scripts.hb.bizmrg.com/assets/images/final-project-background.svg");
+}
+.lesson-item__top.lesson-item_is-graduation-project {
+  background: url("https://frontend-scripts.hb.bizmrg.com/assets/images/graduation-background.svg");
+}
+.lesson-item__top.lesson-item_is-testing {
+  background: url("https://frontend-scripts.hb.bizmrg.com/assets/images/testing-background.svg");
+}
+.lesson-item__top.lesson-item_is-certificate {
+  background: url("https://frontend-scripts.hb.bizmrg.com/assets/images/certificate-background.svg");
+}
+.lesson-item__top.lesson-item_is-live {
+  background: url("https://frontend-scripts.hb.bizmrg.com/assets/images/live-background.svg");
+}
+.lesson-item__top.lesson-item_is-feedback {
+  background: url("https://frontend-scripts.hb.bizmrg.com/assets/images/feedback-background.svg");
+}
+.lesson-item__top .rounded-btn {
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lesson-item__top .rounded-btn .gb-icon {
+  transform: translateX(1px);
+}
+.lesson-item__top .homework-btn .gb-icon {
+  width: 26px;
+  height: 32px;
+}
+.lesson-item__top .geekbrains-btn,
+.lesson-item__top .flag-btn,
+.lesson-item__top .stars-btn,
+.lesson-item__top .pencil-btn {
+  width: 32px;
+  height: 32px;
+}
+.lesson-item__top .geekbrains-btn .gb-icon,
+.lesson-item__top .flag-btn .gb-icon,
+.lesson-item__top .stars-btn .gb-icon,
+.lesson-item__top .pencil-btn .gb-icon {
+  width: 32px;
+  height: 32px;
+  fill: #ffffff;
+}
+.lesson-item__top .feedback-btn {
+  display: flex;
+}
+.lesson-item__top .feedback-btn .rotate-icon {
+  transform: rotate(180deg);
+}
+.lesson-item__top .feedback-btn .gb-icon {
+  width: 40px;
+  height: 40px;
+  fill: #ffffff;
+  stroke-width: 1;
+}
+.lesson-item__top .feedback-btn .gb-icon:first-of-type {
+  margin-right: 4px;
+}
+.lesson-item__top p {
+  font-size: 12px;
+  color: #ffffff;
+  margin: 0;
+  line-height: 18px;
+  font-family: "GB Font", sans-serif;
+}
+.lesson-item__top p strong {
+  font-size: 14px;
+  font-weight: 700;
+}
+.lesson-item__title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  max-height: 40px;
+  overflow: hidden;
+}
+.lesson-item__title-text {
+  display: flex;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #191816;
+  transition: color 0.3s ease;
+}
+.lesson-item__title-text .icon-question.gb-icon {
+  fill: #7c8092;
+  vertical-align: bottom;
+  width: 18px;
+  height: 18px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.lesson-item__text {
+  padding: 0 15px;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 9px;
+  max-height: 75px;
+  overflow: hidden;
+  color: #191816;
+}
+
+/*
+ * Arrow style
+ *
+ * Sets hover, active, focus, disabled styles
+ */
+/**
+ * "ColorPalette"
+ * Primary colors
+ */
+/* Header-background colors */
+/* Phone number input colors */
+/* Avatar-background colors */
+/* Secondary colors */
+/* Semantic colors (Success) */
+/* Semantic colors (Error) */
+/* Semantic colors (Attention) */
+/* Neutral colors */
+/* black-opacity */
+/* white-opacity */
+/* Elevations */
+/* Grid breakpoints */
+/* Grid paddings */
+/* Fonts */
+/* Transition */
+/* Images */
+/* Transition */
+.gb-arrow-navigation {
+  font-family: "GB Font", sans-serif;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+.gb-arrow-navigation_double {
+  gap: 8px;
+}
+.gb-arrow-navigation_with-text {
+  gap: 14px;
+}
+.gb-arrow-navigation_with-counter {
+  gap: 16px;
+}
+.gb-arrow-navigation__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  border: none;
+  color: #191816;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.gb-arrow-navigation__button .button-link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.gb-arrow-navigation__button:disabled .gb-arrow-navigation__button .button-link {
+  cursor: default;
+}
+.gb-arrow-navigation__button .button-icon {
+  transition: all 0.3s ease;
+}
+.gb-arrow-navigation_dark-grey .gb-arrow-navigation__button {
+  background: #e1e1e9;
+}
+.gb-arrow-navigation_dark-grey .gb-arrow-navigation__button:focus-visible:not(:disabled) {
+  background: #e1e1e9;
+  outline: 2px solid #99c0f0;
+}
+.gb-arrow-navigation_dark-grey .gb-arrow-navigation__button:hover:not(:disabled) {
+  background: #d4d4dd;
+}
+.gb-arrow-navigation_dark-grey .gb-arrow-navigation__button:active:not(:disabled) {
+  background: #e1e1e9;
+}
+.gb-arrow-navigation_dark-grey .gb-arrow-navigation__button.disabled, .gb-arrow-navigation_dark-grey .gb-arrow-navigation__button:disabled, .gb-arrow-navigation_dark-grey .gb-arrow-navigation__button[disabled] {
+  background: rgba(244, 245, 250, 0.5);
+  cursor: default;
+}
+.gb-arrow-navigation_dark-grey .gb-arrow-navigation__button.disabled .button-icon, .gb-arrow-navigation_dark-grey .gb-arrow-navigation__button:disabled .button-icon, .gb-arrow-navigation_dark-grey .gb-arrow-navigation__button[disabled] .button-icon {
+  opacity: 0.3;
+}
+.gb-arrow-navigation_light-grey .gb-arrow-navigation__button {
+  background: #eff0f5;
+}
+.gb-arrow-navigation_light-grey .gb-arrow-navigation__button:focus-visible:not(:disabled) {
+  background: #eff0f5;
+  outline: 2px solid #99c0f0;
+}
+.gb-arrow-navigation_light-grey .gb-arrow-navigation__button:hover:not(:disabled) {
+  background: #e1e1e9;
+}
+.gb-arrow-navigation_light-grey .gb-arrow-navigation__button:active:not(:disabled) {
+  background: #eff0f5;
+}
+.gb-arrow-navigation_light-grey .gb-arrow-navigation__button.disabled, .gb-arrow-navigation_light-grey .gb-arrow-navigation__button:disabled, .gb-arrow-navigation_light-grey .gb-arrow-navigation__button[disabled] {
+  background: #f4f5fa;
+  cursor: default;
+}
+.gb-arrow-navigation_light-grey .gb-arrow-navigation__button.disabled .button-icon, .gb-arrow-navigation_light-grey .gb-arrow-navigation__button:disabled .button-icon, .gb-arrow-navigation_light-grey .gb-arrow-navigation__button[disabled] .button-icon {
+  opacity: 0.3;
+}
+.gb-arrow-navigation_white .gb-arrow-navigation__button {
+  background: #ffffff;
+}
+.gb-arrow-navigation_white .gb-arrow-navigation__button:focus-visible:not(:disabled) {
+  background: #ffffff;
+  outline: 2px solid #99c0f0;
+}
+.gb-arrow-navigation_white .gb-arrow-navigation__button:hover:not(:disabled) {
+  background: #e1e1e9;
+}
+.gb-arrow-navigation_white .gb-arrow-navigation__button:active:not(:disabled) {
+  background: #ffffff;
+}
+.gb-arrow-navigation_white .gb-arrow-navigation__button.disabled, .gb-arrow-navigation_white .gb-arrow-navigation__button:disabled, .gb-arrow-navigation_white .gb-arrow-navigation__button[disabled] {
+  background: #f4f5fa;
+  cursor: default;
+}
+.gb-arrow-navigation_white .gb-arrow-navigation__button.disabled .button-icon, .gb-arrow-navigation_white .gb-arrow-navigation__button:disabled .button-icon, .gb-arrow-navigation_white .gb-arrow-navigation__button[disabled] .button-icon {
+  opacity: 0.3;
+}
+.gb-arrow-navigation_size-32 .gb-arrow-navigation__button {
+  max-width: 32px;
+  min-width: 32px;
+  max-height: 32px;
+  min-height: 32px;
+}
+.gb-arrow-navigation_size-32 .gb-arrow-navigation__button .button-icon {
+  width: 20px;
+  height: 20px;
+}
+.gb-arrow-navigation_size-40 .gb-arrow-navigation__button {
+  max-width: 40px;
+  min-width: 40px;
+  max-height: 40px;
+  min-height: 40px;
+}
+.gb-arrow-navigation_size-40 .gb-arrow-navigation__button .button-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.gb-icon {
+  height: 1em;
+  width: 1em;
+  fill: currentcolor;
+  stroke-width: 0;
+}
