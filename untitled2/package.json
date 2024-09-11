@@ -1,0 +1,17 @@
+{
+  "name": "viktor_sample_package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js "
+  },
+  "keywords": [],
+  "author": "Viktor Kashtanov",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^9.0.0"
+  }
+}
+
+
